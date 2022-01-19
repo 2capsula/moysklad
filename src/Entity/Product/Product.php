@@ -88,7 +88,7 @@ class Product extends AbstractProduct
     public $isSerialTrackable;
 
     /**
-     * @Type("array<MoySklad\Entity\Attribute>")
+     * @Type("array")
      */
     public $attributes = [];
 
