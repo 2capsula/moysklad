@@ -8,6 +8,7 @@ use MoySklad\Client\Endpoint\DeleteEntityEndpoint;
 use MoySklad\Client\Endpoint\GetEntitiesListEndpoint;
 use MoySklad\Client\Endpoint\GetEntityEndpoint;
 use MoySklad\Client\Endpoint\GetMetadataAttributeEndpoint;
+use MoySklad\Client\Endpoint\GetMetadataAttributesEndpoint;
 use MoySklad\Client\Endpoint\GetMetadataEndpoint;
 use MoySklad\Client\Endpoint\PostEntitiesEndpoint;
 use MoySklad\Client\Endpoint\PostEntityEndpoint;
@@ -29,6 +30,7 @@ class ProductClient extends EntityClientBase
         DeleteEntitiesEndpoint,
         GetMetadataEndpoint,
         GetMetadataAttributeEndpoint,
+        GetMetadataAttributesEndpoint,
         GetEntityEndpoint,
         PutEntityEndpoint;
 
