@@ -14,12 +14,6 @@ class CustomerOrderAttribute
     public $name;
 
     /**
-     * @Type("DateTime<'Y-m-d H:i:s.v'>")
-     * @Generator(type="datetime")
-     */
-    public $moment;
-
-    /**
      * @Type("string")
      */
     public $href;
@@ -28,4 +22,11 @@ class CustomerOrderAttribute
      * @Type("string")
      */
     public $fileName;
+
+    /**
+     * @Type("string")
+     */
+    public $value;
+
+//    public $meta;
 }
