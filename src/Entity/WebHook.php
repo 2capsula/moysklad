@@ -6,6 +6,7 @@ use JMS\Serializer\Annotation\Type;
 
 class WebHook extends MetaEntity
 {
+
     /**
      * @Type("string")
      */
@@ -30,4 +31,5 @@ class WebHook extends MetaEntity
      * @Type("bool")
      */
     public $enabled;
+
 }
