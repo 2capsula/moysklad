@@ -5,6 +5,7 @@ namespace MoySklad\Http;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Psr7\Request;
+use Illuminate\Support\Facades\Log;
 use JMS\Serializer\Serializer;
 use MoySklad\ApiClient;
 use MoySklad\Entity\MetaEntity;
@@ -175,6 +176,7 @@ class RequestExecutor
     public function bodyArray(array $body): self
     {
         $this->body = $body;
+        Log::channel('stock')->info(json_encode($body));
 
         return $this;
     }
@@ -186,6 +188,7 @@ class RequestExecutor
     public function body(MetaEntity $body): self
     {
         $this->body = $body;
+        Log::channel('stock')->info(json_encode($body));
 
         return $this;
     }
@@ -230,6 +233,7 @@ class RequestExecutor
     private function executeRequest(Request $request): string
     {
         try {
+            Log::channel('stock')->info(json_encode($request));
             $response = $this->client->sendRequest($request);
 
             if ($response->getStatusCode() != 200 &&
